@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- Design by foolishdeveloper.com-->
+<html lang="en">
+<head>
+  <title>filterable gallery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <style media="screen">
+
+body{
+	line-height: 1.5;
+	font-family: sans-serif;
+}
+*{
+	margin:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+img{
+	max-width: 100%;
+	vertical-align: middle;
+}
+/*.gallery*/
+.gallery{
+	width: 100%;
+	display: block;
+	min-height: 100vh;
+	background-color: #2a2932;
+	padding: 100px 0;
+}
+.gallery .gallery-filter{
+	padding: 0 15px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.gallery .gallery-filter .filter-item{
+	color: #ffffff;
+	font-size: 17px;
+  border: 2px solid white;
+	text-transform: uppercase;
+	display: inline-block;
+  border-radius: 20px;
+  margin-right: 8px;
+	cursor: pointer;
+  padding: 8px 20px 8px 20px;
+	line-height: 1.2;
+	transition: all 0.3s ease;
+}
+.gallery .gallery-filter .filter-item.active{
+	color: white;
+	border-color : #16b5ef;
+  background: #16b5ef;
+}
+.gallery .gallery-item{
+	width: calc(100% / 3);
+	padding: 15px;
+
+}
+.gallery .gallery-item-inner img{
+	width: 100%;
+  border: 3px solid #d4dad9;
+}
+.gallery .gallery-item.show{
+	animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.gallery .gallery-item.hide{
+	display: none;
+}
+
+/*responsive*/
+@media(max-width: 491px){
+	.gallery .gallery-item{
+		width: 50%;
+	}
+}
+@media(max-width: 467px){
+    .gallery .gallery-item{
+		width: 100%;
+	}
+	.gallery .gallery-filter .filter-item{
+		margin-bottom: 10px;
+	}
+}
+
+  </style>
+</head>
+<body>
+
+
+    <nav>
+        <div class="container">
+            <div class="menu-par">
+                <div class="logo-par">
+                    <a href="./index.html">
+                        <h2 class="camp">CAMPER</h2>
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a class="menu-hover" href="./home.html">Home</a></li>
+                        <li><a class="menu-hover" href="./Travel.html">Travel</a></li>
+                        <li><a class="menu-hover" href="./Hotel_booking/index.php">Book Now</a></li>
+                        <li><a class="menu-hover" href="./Gellary.html">Gallery</a></li>
+                        <li><a class="menu-hover" href="./Holiday.html">Holyday</a></li>
+                        <li><a class="menu-hover" href="./blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div id="toggle-btn">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="header-info-par">
+                <h1 class="typewrite" data-period="2000"
+                    data-type='["Happiness is closer than you think","Adventure Awaits, go find it.","Dont be a tourist, be a traveler."]'>
+                </h1>
+                <p>The shape of Sri Lanka resembles a tear, but its tropical landscapes make for a relaxing and refreshing vacation.</p>
+                <a href="#" class="a"> Gallery Of Sri Lanka </a>
+            </div>
+            <div class="video">
+                <video id="video" autoplay loop muted>
+                    <source src="./Video/gellary (2).mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </header> 
+
+<section class="gallery">
+	<div class="container">
+		<div class="row">
+			<div class="gallery-filter">
+				<span class="filter-item active" data-filter="all">all</span>
+				<span class="filter-item" data-filter="watch">Animals</span>
+				<span class="filter-item" data-filter="headphone">Beaches</span>
+				<span class="filter-item" data-filter="camera">Mountains</span>
+        <span class="filter-item" data-filter="phone">Temples</span>
+			</div>
+		</div>
+		<div class="row">
+			<!-- gallery item start -->
+			<div class="gallery-item shoe">
+				<div class="gallery-item-inner">
+					<img src="./images/sl (1).jpg" alt="shoe">
+				</div>
+			</div>
+			<!-- gallery item end -->
+			<!-- gallery item start -->
+			<div class="gallery-item headphone">
+				<div class="gallery-item-inner">
+					<img src="./images/sl (2).jpg" alt="Beaches">
+				</div>
+			</div>
+			<!-- gallery item end -->
+			<!-- gallery item start -->
+			<div class="gallery-item camera">
+				<div class="gallery-item-inner">
+					<img src="./images/sl (3).jpg" alt="camera">
+				</div>
+			</div>
+			<!-- gallery item end -->
+			<!-- gallery item start -->
+			<div class="gallery-item headphone">
+				<div class="gallery-item-inner">
+					<img src="./images/sl (4).jpg" alt="Beaches">
+				</div>
+			</div>
+			<!-- gallery item end -->
+			<!-- gallery item start -->
+			<div class="gallery-item camera">
+				<div class="gallery-item-inner">
+					<img src="./images/sl (5).jpg" alt="camera">
+				</div>
+			</div>
+			<!-- gallery item end -->
+      			<div class="gallery-item phone">
+      				<div class="gallery-item-inner">
+      					<img src="./images/beach.jpg" alt="phone">
+      				</div>
+      			</div>
+
+			<div class="gallery-item camera">
+				<div class="gallery-item-inner">
+					<img src="./images/Galle.jpg" alt="camera">
+				</div>
+			</div>
+
+			<div class="gallery-item watch">
+				<div class="gallery-item-inner">
+					<img src="./images/colombo.jpg" alt="watch">
+				</div>
+			</div>
+
+			<!-- gallery item start -->
+			<div class="gallery-item watch">
+				<div class="gallery-item-inner">
+					<img src="./images/Dalada Maligawa.jpeg" alt="watch">
+				</div>
+			</div>
+			<!-- gallery item end -->
+		</div>
+	</div>
+</section>
+
+<script>
+
+
+ const filterContainer = document.querySelector(".gallery-filter"),
+ galleryItems = document.querySelectorAll(".gallery-item");
+
+ filterContainer.addEventListener("click", (event) =>{
+   if(event.target.classList.contains("filter-item")){
+   	 // deactivate existing active 'filter-item'
+   	 filterContainer.querySelector(".active").classList.remove("active");
+   	 // activate new 'filter-item'
+   	 event.target.classList.add("active");
+   	 const filterValue = event.target.getAttribute("data-filter");
+   	 galleryItems.forEach((item) =>{
+       if(item.classList.contains(filterValue) || filterValue === 'all'){
+       	item.classList.remove("hide");
+       	 item.classList.add("show");
+       }
+       else{
+       	item.classList.remove("show");
+       	item.classList.add("hide");
+       }
+   	 });
+   }
+ });
+</script>
+</body>
+</html>
